@@ -1,0 +1,8 @@
+| Color actual | Nuevo color (verde) | Contexto                 | Comentario                                                       |
+| ------------ | ------------------- | ------------------------ | ---------------------------------------------------------------- |
+| `#935d8c`    | `#2e7d32`           | Fondo base/acento        | Verde bosque sobrio, ideal para un fondo elegante                |
+| `#e37682`    | `#81c784`           | Verde claro (degradado)  | Verde menta suave para degradados o bloques más claros           |
+| `#5f4d93`    | `#1b5e20`           | Verde oscuro (degradado) | Verde intenso y profundo para contraste o detalles importantes   |
+| `#8cc9f0`    | `#43a047`           | Botones principales      | Verde medio vibrante para llamados a la acción (CTAs)            |
+| `#9acff2`    | `#66bb6a`           | Hover claro              | Verde medio-claro para efectos hover más suaves                  |
+| `#7ec3ee`    | `#2e7d32`           | Hover oscuro             | Mismo que base/acento para consistencia o reutilización elegante |
