@@ -6,6 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .timeline {
+      border-left: 2px solid #2e7d32;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+    .timeline ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .timeline ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.4rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #2e7d32;
+      border-radius: 50%;
+    }
+    p, ul {
+      text-align: justify;
+      font-size: 0.95rem;
+      line-height: 1.5rem;
+    }
+    h3 {
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body class="is-preload">
   <div id="wrapper">
@@ -30,63 +60,78 @@
         <div class="row">
 
           <!-- LEFT COLUMN -->
-          <div class="col-6 col-12-medium" style="border-left: 3px solid #2e7d32; padding-left: 1rem; margin-bottom: 2rem;">
-            <h3 style="font-weight: 600;">Summary</h3>
-            <p style="text-align: justify;">
-              Data specialist with a background in Chemical Engineering and currently pursuing a Master’s in Computational Biology.
-              Experienced in building PowerApps applications, automating workflows, and delivering insights through interactive dashboards in Power BI and Python.
-            </p>
+          <div class="col-6 col-12-medium">
+            <h3>Summary</h3>
+            <div class="timeline">
+              <p>
+                Data specialist with a background in Chemical Engineering and currently pursuing a Master’s in Computational Biology.
+                Experienced in building PowerApps applications, automating workflows, and delivering insights through interactive dashboards in Power BI and Python.
+              </p>
+            </div>
 
-            <h3 style="font-weight: 600;">Education</h3>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li><strong>M.Sc., Computational Biology</strong><br />
-                Universidad de los Andes – Bogotá, Colombia (Expected August 2025)
-              </li>
-              <li><strong>B.Sc., Chemical Engineering</strong><br />
-                Universidad de La Sabana – Chía, Colombia (May 2021)
-              </li>
-            </ul>
+            <h3>Education</h3>
+            <div class="timeline">
+              <ul>
+                <li><strong>M.Sc., Computational Biology</strong><br />
+                  Universidad de los Andes – Bogotá, Colombia (Expected August 2025)
+                </li>
+                <li><strong>B.Sc., Chemical Engineering</strong><br />
+                  Universidad de La Sabana – Chía, Colombia (May 2021)
+                </li>
+              </ul>
+            </div>
 
-            <h3 style="font-weight: 600;">Skills</h3>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li><strong>Technical:</strong> Power BI, Power Automate, PowerApps, Python, SQL, Excel</li>
-              <li><strong>Languages:</strong> Native Spanish, Professional English</li>
-            </ul>
+            <h3>Skills</h3>
+            <div class="timeline">
+              <ul>
+                <li><strong>Technical:</strong> Power BI, Power Automate, PowerApps, Python, SQL, Excel</li>
+                <li><strong>Languages:</strong> Native Spanish, Professional English</li>
+              </ul>
+            </div>
           </div>
 
           <!-- RIGHT COLUMN -->
-          <div class="col-6 col-12-medium" style="border-left: 3px solid #2e7d32; padding-left: 1rem; margin-bottom: 2rem;">
-            <h3 style="font-weight: 600;">Professional Experience</h3>
-
-            <strong>Customer Success Architect – Novartis</strong>
-            <p style="text-align: justify;">Bogotá, Colombia | Aug 2023 – Dec 2024</p>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li>Developed PowerApps to digitize and optimize business processes.</li>
-              <li>Automated logic with Python scripts and integrated third-party tools.</li>
-              <li>Improved application performance and responsiveness.</li>
-            </ul>
-
-            <strong>Business Intelligence Analyst – Ticket Fast SAS</strong>
-            <p style="text-align: justify;">Bogotá, Colombia | Mar 2023 – Aug 2023</p>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li>Created dashboards in Power BI to support decision-making.</li>
-              <li>Cleaned, validated, and modeled business data.</li>
-              <li>Explored insights and recommended process improvements.</li>
-            </ul>
-
-            <strong>Pricing Analyst I – Caldic Latam</strong>
-            <p style="text-align: justify;">Bogotá, Colombia | May 2022 – Jan 2023</p>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li>Monitored and analyzed national pricing strategies.</li>
-              <li>Led dashboard development for pricing performance tracking.</li>
-            </ul>
-
-            <strong>Commercial Analyst Intern – Caldic Latam</strong>
-            <p style="text-align: justify;">Bogotá, Colombia | Aug 2021 – Feb 2022</p>
-            <ul style="text-align: justify; margin-top: 0.5rem;">
-              <li>Supported CRM system improvement and opportunity tracking.</li>
-              <li>Built tools for pricing and commercial reporting.</li>
-            </ul>
+          <div class="col-6 col-12-medium">
+            <h3>Professional Experience</h3>
+            <div class="timeline">
+              <ul>
+                <li><strong>Customer Success Architect – Novartis</strong><br />
+                Bogotá, Colombia | Aug 2023 – Dec 2024
+                  <ul>
+                    <li>Designed and developed customized business applications using Microsoft PowerApps, integrating automated workflows with Power Automate to digitize and optimize critical processes, reducing manual intervention, minimizing errors, and accelerating the execution of key tasks.</li>
+                    <li>Developed Python scripts to automate complex tasks not covered by Power Automate, expanding application functionality and improving integration with other systems.</li>
+                    <li>Created tailored solutions to meet business needs, utilizing various tools to optimize processing times, enhance system responsiveness, and improve organizational operational efficiency.</li>
+                  </ul>
+                </li>
+                <li><strong>Business Intelligence Analyst – Ticket Fast SAS</strong><br />
+                Bogotá, Colombia | Mar 2023 – Aug 2023
+                  <ul>
+                    <li>Collect and analyze data to identify patterns and insights for decision-making while ensuring data accuracy and integrity through data cleansing, transformation, and validation.</li>
+                    <li>Develop interactive dashboards and reports utilizing Power BI for effective data visualization.</li>
+                    <li>Identify opportunities for process improvement and optimization through thorough data analysis.</li>
+                    <li>Design data models to implement valuable metrics and address customer needs more effectively.</li>
+                  </ul>
+                </li>
+                <li><strong>Pricing Analyst I – Caldic Latam</strong><br />
+                Bogotá, Colombia | May 2022 – Jan 2023
+                  <ul>
+                    <li>Led national pricing analysis and adjustments, applying pricing models to optimize commercial strategies.</li>
+                    <li>Managed databases and developed dashboards in Power BI to monitor pricing and its impact on business plans, facilitating decision-making.</li>
+                    <li>Collaborated in the development of business plans and participated in the introduction of a new pricing calculation methodology, driving operational efficiency.</li>
+                    <li>Strengthened project management and strategic analysis skills, contributing to the optimization of commercial processes.</li>
+                  </ul>
+                </li>
+                <li><strong>Commercial Analyst Intern – Caldic Latam</strong><br />
+                Bogotá, Colombia | Aug 2021 – Feb 2022
+                  <ul>
+                    <li>Conducted commercial analysis and management to support strategic decision-making, optimize sales, and maximize profitability.</li>
+                    <li>Implemented CRM systems and developed analytical tools to improve client relationships and facilitate sales tracking.</li>
+                    <li>Identified business opportunities and developed pricing strategies, contributing to business growth.</li>
+                    <li>Enhanced skills in data analysis, project management, and commercial processes.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -110,7 +155,7 @@
         </dl>
       </section>
       <p class="copyright">
-        &copy; Gimbler 2025. Design adapted from <a href="https://html5up.net">HTML5 UP</a>.
+        &copy; Gimbler Perdomo. Design adapted from <a href="https://html5up.net">HTML5 UP</a>.
       </p>
     </footer>
   </div>
