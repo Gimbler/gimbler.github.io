@@ -6,6 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .timeline {
+      border-left: 1px solid #2e7d32;
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+    .timeline ul li {
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+    .timeline ul li ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+    .timeline ul li strong {
+      display: inline;
+    }
+    p, ul {
+      text-align: justify;
+      font-size: 1rem;
+      line-height: 1.7rem;
+    }
+    h3 {
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .col-6 {
+      width: 50%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+    @media screen and (max-width: 768px) {
+      .col-6 {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body class="is-preload">
   <!-- Nav -->
@@ -19,53 +64,6 @@
   </nav>
 
   <div id="wrapper">
-    <style>
-      .timeline {
-        border-left: 1px solid #2e7d32;
-        padding-left: 1.25rem;
-        margin-bottom: 2rem;
-        max-width: 100%;
-      }
-      .timeline ul li {
-        padding-left: 0;
-        margin-bottom: 1rem;
-        list-style: none;
-      }
-      .timeline ul li ul {
-        list-style: disc;
-        padding-left: 1.5rem;
-      }
-      .timeline ul li strong {
-        display: inline;
-      }
-      p, ul {
-        text-align: justify;
-        font-size: 1rem;
-        line-height: 1.7rem;
-      }
-      h3 {
-        font-weight: 600;
-        margin-top: 2rem;
-      }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1200px;
-      }
-      .col-6 {
-        width: 50%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-      }
-      @media screen and (max-width: 768px) {
-        .col-6 {
-          width: 100%;
-        }
-      }
-    </style>
-
     <!-- Main -->
     <div id="main">
       <section id="content" class="main" style="padding-top: 1.5rem;">
@@ -83,7 +81,7 @@
 
             <h3>Education</h3>
             <div class="timeline">
-              <ul>
+              <ul style="list-style: none; padding-left: 0;">
                 <li><strong>M.Sc., Computational Biology</strong><br />
                 Universidad de los Andes – Bogotá, Colombia (Expected August 2025)</li>
                 <li><strong>B.Sc., Chemical Engineering</strong><br />
@@ -93,7 +91,7 @@
 
             <h3>Skills</h3>
             <div class="timeline">
-              <ul>
+              <ul style="list-style: none; padding-left: 0;">
                 <li><strong>Technical:</strong> Power BI, Power Automate, PowerApps, Python, SQL, Excel</li>
                 <li><strong>Languages:</strong> Native Spanish, Professional English</li>
               </ul>
@@ -165,7 +163,7 @@
         </dl>
       </section>
       <p class="copyright">
-        &copy; Gimbler Perdomo. Design adapted from <a href="https://html5up.net">HTML5 UP</a>.
+        &copy; Gimbler 2025 Design adapted from <a href="https://html5up.net">HTML5 UP</a>.
       </p>
     </footer>
   </div>
