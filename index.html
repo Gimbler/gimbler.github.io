@@ -68,34 +68,100 @@
 							  <header class="major">
 							    <h2>Portfolio</h2>
 							  </header>
-							  <ul class="features">
+							  <ul class="features portfolio-icons">
 							    <li>
 							      <a href="powerbi.html">
-							        <span class="icon major style1">
-							          <img src="images/PowerBI_scalable.svg" alt="Power BI Icon" style="height: 100%; width: 100%; object-fit: contain;" />
-							        </span>
+							        <div class="icon-wrapper style1">
+							          <img src="images/PowerBI_scalable.svg" alt="Power BI Icon">
+							        </div>
 							        <h3>Power BI</h3>
 							        <p>Dashboards and reporting tools designed for strategic insight and data visibility.</p>
 							      </a>
 							    </li>
 							    <li>
 							      <a href="powerapps.html">
-							        <span class="icon major style3">
-							          <img src="images/PowerApps_scalable.svg" alt="Power Apps Icon" style="height: 100%; width: 100%; object-fit: contain;" />
-							        </span>
+							        <div class="icon-wrapper style3">
+							          <img src="images/PowerApps_scalable.svg" alt="Power Apps Icon">
+							        </div>
 							        <h3>Power Apps</h3>
 							        <p>Custom apps built to automate workflows and improve business processes.</p>
 							      </a>
 							    </li>
 							    <li>
 							      <a href="machinelearning.html">
-							        <span class="icon solid major style5 fa-code"></span>
+							        <div class="icon-wrapper style5">
+							          <img src="images/code-solid.svg" alt="Machine Learning Icon">
+							        </div>
 							        <h3>Machine Learning</h3>
 							        <p>Predictive models and intelligent systems that solve real-world problems.</p>
 							      </a>
 							    </li>
 							  </ul>
 							</section>
+							
+							<!-- Estilos -->
+							<style>
+							  .portfolio-icons li {
+							    text-align: center;
+							  }
+							
+							  .portfolio-icons a {
+							    text-decoration: none;
+							  }
+							
+							  .icon-wrapper {
+							    position: relative;
+							    width: 6.5em;
+							    height: 6.5em;
+							    border-radius: 50%;
+							    display: inline-flex;
+							    align-items: center;
+							    justify-content: center;
+							    margin: 0 auto 1rem auto;
+							    transition: background 0.3s ease;
+							    background: transparent;
+							  }
+							
+							  .icon-wrapper img {
+							    max-width: 60%;
+							    max-height: 60%;
+							    object-fit: contain;
+							  }
+							
+							  .icon-wrapper::before,
+							  .icon-wrapper::after {
+							    content: "";
+							    position: absolute;
+							    border-radius: 50%;
+							    border: 1px solid #ccc;
+							  }
+							
+							  .icon-wrapper::before {
+							    width: 100%;
+							    height: 100%;
+							  }
+							
+							  .icon-wrapper::after {
+							    width: 120%;
+							    height: 120%;
+							    left: -10%;
+							    top: -10%;
+							  }
+							
+							  /* Hover effect */
+							  .portfolio-icons li a:hover .icon-wrapper.style1 {
+							    background: #f56a6a;
+							  }
+							
+							  .portfolio-icons li a:hover .icon-wrapper.style3 {
+							    background: #6cc091;
+							  }
+							
+							  .portfolio-icons li a:hover .icon-wrapper.style5 {
+							    background: #679ec5;
+							  }
+							</style>
+
 
 
 
