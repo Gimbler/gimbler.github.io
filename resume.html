@@ -6,47 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
   <style>
-    .timeline {
+    .resume-content .timeline {
       border-left: 1px solid #2e7d32;
       padding-left: 1.25rem;
       margin-bottom: 2rem;
       max-width: 100%;
     }
-    .timeline ul li {
+
+    .resume-content .timeline ul li {
       padding-left: 0;
       margin-bottom: 1rem;
     }
-    .timeline ul li ul {
+
+    .resume-content .timeline ul li ul {
       list-style: disc;
       padding-left: 1.5rem;
     }
-    .timeline ul li strong {
+
+    .resume-content .timeline ul li strong {
       display: inline;
     }
-    p, ul {
+
+    .resume-content p, 
+    .resume-content ul {
       text-align: justify;
       font-size: 1rem;
       line-height: 1.7rem;
     }
-    h3 {
+
+    .resume-content h3 {
       font-weight: 600;
       margin-top: 2rem;
     }
-    .row {
+
+    .resume-content .row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin: 0 auto;
       max-width: 1200px;
     }
-    .col-6 {
+
+    .resume-content .col-6 {
       width: 50%;
       padding: 0 1rem;
       box-sizing: border-box;
     }
+
     @media screen and (max-width: 768px) {
-      .col-6 {
+      .resume-content .col-6 {
         width: 100%;
       }
     }
@@ -55,7 +65,7 @@
 <body class="is-preload">
   <div id="wrapper">
 
-    <!-- Nav -->
+    <!-- Nav (dentro del wrapper para mantener estilos globales correctos) -->
     <nav id="nav">
       <ul>
         <li><a href="index.html#intro">About me</a></li>
@@ -64,10 +74,10 @@
         <li><a href="resume.html" class="active">Resume</a></li>
       </ul>
     </nav>
-    
+
     <!-- Main -->
     <div id="main">
-      <section id="content" class="main" style="padding-top: 1.5rem;">
+      <section id="content" class="main resume-content" style="padding-top: 1.5rem;">
         <header class="major">
           <h2>Resume</h2>
         </header>
@@ -153,7 +163,7 @@
         <p>Feel free to reach out if you’re working on something where data can make a difference.</p>
       </section>
       <section>
-        <h2>Contact</h2>
+        <h2>Contact information</h2>
         <dl class="alt">
           <dt>Location</dt>
           <dd>Bogotá, Colombia</dd>
