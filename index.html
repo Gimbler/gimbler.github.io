@@ -107,6 +107,8 @@
 							
 							  .portfolio-icons a {
 							    text-decoration: none;
+							    border-bottom: none !important; /* 🚫 Elimina la línea gris punteada */
+							    display: inline-block;
 							  }
 							
 							  .icon-wrapper {
@@ -126,6 +128,7 @@
 							    max-width: 60%;
 							    max-height: 60%;
 							    object-fit: contain;
+							    transition: filter 0.3s ease;
 							  }
 							
 							  .icon-wrapper::before,
@@ -148,19 +151,16 @@
 							    top: -10%;
 							  }
 							
-							  /* Hover effect */
-							  .portfolio-icons li a:hover .icon-wrapper.style1 {
-							    background: #f56a6a;
+							  /* Hover effect: fondo y color uniforme para todos los íconos */
+							  .portfolio-icons li a:hover .icon-wrapper {
+							    background-color: rgba(255, 255, 255, 0.2);
 							  }
 							
-							  .portfolio-icons li a:hover .icon-wrapper.style3 {
-							    background: #6cc091;
-							  }
-							
-							  .portfolio-icons li a:hover .icon-wrapper.style5 {
-							    background: #679ec5;
+							  .portfolio-icons li a:hover img {
+							    filter: brightness(0) invert(1);
 							  }
 							</style>
+
 
 
 
