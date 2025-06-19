@@ -162,22 +162,28 @@
 							  }
 							</style>
 
-							<!-- Second Section (Certificates Carousel Enhanced) -->
+							<!-- Second Section (Certificates Carousel Improved) -->
 							<section id="second" class="main special">
 							  <header class="major">
 							    <h2>Certificates</h2>
 							  </header>
 							
-							  <div class="carousel-container">
+							  <div class="carousel-wrapper">
 							    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
 							    
-							    <div class="certificate-carousel" id="carousel">
-							      <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank" class="certificate-item">
-							        <img src="images/certificates/certificate1.jpeg" alt="Certificate 1">
-							      </a>
-							      <a href="#" class="certificate-item">
-							        <img src="images/certificates/certificate2.jpeg" alt="Certificate 2">
-							      </a>
+							    <div class="carousel-track" id="carousel">
+							      <div class="certificate-slide">
+							        <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank">
+							          <img src="images/certificates/certificate1.jpeg" alt="Microsoft Certificate" />
+							        </a>
+							        <p class="cert-title">Microsoft Power Platform Fundamentals</p>
+							      </div>
+							      <div class="certificate-slide">
+							        <a href="#">
+							          <img src="images/certificates/certificate2.jpeg" alt="PMI Certificate" />
+							        </a>
+							        <p class="cert-title">Gerencia de Proyectos con Metodología PMI</p>
+							      </div>
 							    </div>
 							
 							    <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
@@ -185,67 +191,80 @@
 							</section>
 							
 							<style>
-							  .carousel-container {
+							  .carousel-wrapper {
 							    position: relative;
 							    max-width: 800px;
 							    margin: 0 auto;
 							    overflow: hidden;
 							  }
 							
-							  .certificate-carousel {
+							  .carousel-track {
 							    display: flex;
 							    transition: transform 0.5s ease-in-out;
 							    scroll-snap-type: x mandatory;
 							  }
 							
-							  .certificate-item {
+							  .certificate-slide {
 							    flex: 0 0 100%;
+							    text-align: center;
 							    scroll-snap-align: center;
-							    text-decoration: none;
-							    border: none;
 							    padding: 1rem;
 							    box-sizing: border-box;
 							  }
 							
-							  .certificate-item img {
+							  .certificate-slide img {
 							    width: 100%;
-							    height: auto;
-							    max-height: 500px;
+							    height: 500px;
 							    object-fit: contain;
-							    border-radius: 8px;
+							    border-radius: 10px;
 							    transition: transform 0.3s ease, box-shadow 0.3s ease;
 							    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 							  }
 							
-							  .certificate-item:hover img {
+							  .certificate-slide img:hover {
 							    transform: scale(1.03);
 							    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+							  }
+							
+							  .cert-title {
+							    margin-top: 0.8rem;
+							    font-size: 1rem;
+							    color: #444;
 							  }
 							
 							  .carousel-btn {
 							    position: absolute;
 							    top: 50%;
 							    transform: translateY(-50%);
-							    background: rgba(255, 255, 255, 0.7);
+							    background: rgba(255, 255, 255, 0.8);
 							    border: none;
-							    padding: 0.6rem 1rem;
+							    width: 2.5rem;
+							    height: 2.5rem;
+							    border-radius: 50%;
+							    font-size: 1.3rem;
 							    cursor: pointer;
-							    font-size: 1.5rem;
 							    z-index: 2;
 							    transition: background 0.3s ease;
-							    border-radius: 50%;
 							  }
 							
 							  .carousel-btn:hover {
-							    background: rgba(200, 200, 200, 0.9);
+							    background: rgba(220, 220, 220, 0.9);
 							  }
 							
 							  .carousel-btn.prev {
-							    left: 10px;
+							    left: -3rem;
 							  }
 							
 							  .carousel-btn.next {
-							    right: 10px;
+							    right: -3rem;
+							  }
+							
+							  @media screen and (max-width: 768px) {
+							    .carousel-btn.prev,
+							    .carousel-btn.next {
+							      left: 5px;
+							      right: 5px;
+							    }
 							  }
 							</style>
 							
@@ -259,10 +278,10 @@
 							    carousel.style.transform = `translateX(-${index * 100}%)`;
 							  }
 							
-							  // Autoplay
+							  // Autoplay every 8 seconds
 							  setInterval(() => {
 							    scrollCarousel(1);
-							  }, 4000);
+							  }, 8000);
 							</script>
 
 
