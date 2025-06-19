@@ -162,50 +162,55 @@
 							  }
 							</style>
 
-
-							<!-- Second Section (Certificates Carousel) -->
+							<!-- Second Section (Certificates Carousel Enhanced) -->
 							<section id="second" class="main special">
 							  <header class="major">
 							    <h2>Certificates</h2>
-							    <p>Selected certifications demonstrating knowledge and professional development.</p>
 							  </header>
 							
-							  <div class="certificate-carousel">
-							    <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank" class="certificate-item">
-							      <img src="images/certificates/certificate1.jpeg" alt="Certificate 1">
-							    </a>
-							    <a href="#" class="certificate-item">
-							      <img src="images/certificates/certificate2.jpeg" alt="Certificate 2">
-							    </a>
+							  <div class="carousel-container">
+							    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+							    
+							    <div class="certificate-carousel" id="carousel">
+							      <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank" class="certificate-item">
+							        <img src="images/certificates/certificate1.jpeg" alt="Certificate 1">
+							      </a>
+							      <a href="#" class="certificate-item">
+							        <img src="images/certificates/certificate2.jpeg" alt="Certificate 2">
+							      </a>
+							    </div>
+							
+							    <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
 							  </div>
 							</section>
 							
 							<style>
-							  .certificate-carousel {
-							    display: flex;
-							    overflow-x: auto;
-							    gap: 1.5rem;
-							    padding: 1rem 0;
-							    scroll-snap-type: x mandatory;
-							    -webkit-overflow-scrolling: touch;
+							  .carousel-container {
+							    position: relative;
+							    max-width: 800px;
+							    margin: 0 auto;
+							    overflow: hidden;
 							  }
 							
-							  .certificate-carousel::-webkit-scrollbar {
-							    display: none; /* Oculta la barra de scroll */
+							  .certificate-carousel {
+							    display: flex;
+							    transition: transform 0.5s ease-in-out;
+							    scroll-snap-type: x mandatory;
 							  }
 							
 							  .certificate-item {
-							    flex: 0 0 auto;
-							    width: 300px;
-							    max-height: 220px;
-							    scroll-snap-align: start;
+							    flex: 0 0 100%;
+							    scroll-snap-align: center;
 							    text-decoration: none;
 							    border: none;
+							    padding: 1rem;
+							    box-sizing: border-box;
 							  }
 							
 							  .certificate-item img {
 							    width: 100%;
-							    height: 100%;
+							    height: auto;
+							    max-height: 500px;
 							    object-fit: contain;
 							    border-radius: 8px;
 							    transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -216,7 +221,50 @@
 							    transform: scale(1.03);
 							    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 							  }
+							
+							  .carousel-btn {
+							    position: absolute;
+							    top: 50%;
+							    transform: translateY(-50%);
+							    background: rgba(255, 255, 255, 0.7);
+							    border: none;
+							    padding: 0.6rem 1rem;
+							    cursor: pointer;
+							    font-size: 1.5rem;
+							    z-index: 2;
+							    transition: background 0.3s ease;
+							    border-radius: 50%;
+							  }
+							
+							  .carousel-btn:hover {
+							    background: rgba(200, 200, 200, 0.9);
+							  }
+							
+							  .carousel-btn.prev {
+							    left: 10px;
+							  }
+							
+							  .carousel-btn.next {
+							    right: 10px;
+							  }
 							</style>
+							
+							<script>
+							  const carousel = document.getElementById('carousel');
+							  let index = 0;
+							  const totalItems = carousel.children.length;
+							
+							  function scrollCarousel(direction) {
+							    index = (index + direction + totalItems) % totalItems;
+							    carousel.style.transform = `translateX(-${index * 100}%)`;
+							  }
+							
+							  // Autoplay
+							  setInterval(() => {
+							    scrollCarousel(1);
+							  }, 4000);
+							</script>
+
 
 					<!--
 						 Get Started
