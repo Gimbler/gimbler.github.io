@@ -29,7 +29,7 @@
 						<ul>
 							<li><a href="#intro" class="active">About me</a></li>
 							<li><a href="#first">Portfolio</a></li>
-							<li><a href="#second">Certifications</a></li>
+							<li><a href="#second">Certificates</a></li>
 							<li><a href="resume.html">Resume</a></li>
 						</ul>
 					</nav>
@@ -163,42 +163,61 @@
 							</style>
 
 
-						<!-- Second Section -->
+							<!-- Second Section (Certificates Carousel) -->
 							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="resume.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
+							  <header class="major">
+							    <h2>Certificates</h2>
+							    <p>Selected certifications demonstrating knowledge and professional development.</p>
+							  </header>
+							
+							  <div class="certificate-carousel">
+							    <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank" class="certificate-item">
+							      <img src="images/certificates/certificate1.jpeg" alt="Certificate 1">
+							    </a>
+							    <a href="#" class="certificate-item">
+							      <img src="images/certificates/certificate2.jpeg" alt="Certificate 2">
+							    </a>
+							  </div>
 							</section>
+							
+							<style>
+							  .certificate-carousel {
+							    display: flex;
+							    overflow-x: auto;
+							    gap: 1.5rem;
+							    padding: 1rem 0;
+							    scroll-snap-type: x mandatory;
+							    -webkit-overflow-scrolling: touch;
+							  }
+							
+							  .certificate-carousel::-webkit-scrollbar {
+							    display: none; /* Oculta la barra de scroll */
+							  }
+							
+							  .certificate-item {
+							    flex: 0 0 auto;
+							    width: 300px;
+							    max-height: 220px;
+							    scroll-snap-align: start;
+							    text-decoration: none;
+							    border: none;
+							  }
+							
+							  .certificate-item img {
+							    width: 100%;
+							    height: 100%;
+							    object-fit: contain;
+							    border-radius: 8px;
+							    transition: transform 0.3s ease, box-shadow 0.3s ease;
+							    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+							  }
+							
+							  .certificate-item:hover img {
+							    transform: scale(1.03);
+							    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+							  }
+							</style>
+
 					<!--
 						 Get Started
 							<section id="cta" class="main special">
