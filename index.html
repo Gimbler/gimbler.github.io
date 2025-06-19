@@ -162,7 +162,7 @@
 							  }
 							</style>
 
-							<!-- Second Section (Certificates Carousel Fully Refined) -->
+							<!-- Second Section (Certificates Carousel Refined Final) -->
 							<section id="second" class="main special">
 							  <header class="major">
 							    <h2>Certificates</h2>
@@ -191,17 +191,16 @@
 							</section>
 							
 							<style>
-							  /* Avoid border on images and links */
 							  .certificate-slide a {
 							    border-bottom: none !important;
 							  }
 							
 							  .carousel-wrapper {
 							    position: relative;
-							    max-width: 800px;
+							    max-width: 1200px;
 							    margin: 0 auto;
 							    overflow: hidden;
-							    padding: 0 4rem; /* give space for arrows */
+							    padding: 0 5rem;
 							  }
 							
 							  .carousel-track {
@@ -220,7 +219,8 @@
 							
 							  .certificate-slide img {
 							    width: 100%;
-							    height: 500px;
+							    max-width: 1000px;
+							    height: 580px;
 							    object-fit: contain;
 							    border-radius: 10px;
 							    transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -233,8 +233,8 @@
 							  }
 							
 							  .cert-title {
-							    margin-top: 0.8rem;
-							    font-size: 1rem;
+							    margin-top: 1rem;
+							    font-size: 1.1rem;
 							    color: #444;
 							  }
 							
@@ -244,14 +244,17 @@
 							    transform: translateY(-50%);
 							    background: rgba(255, 255, 255, 0.85);
 							    border: none;
-							    width: 2.8rem;
-							    height: 2.8rem;
+							    width: 3rem;
+							    height: 3rem;
 							    border-radius: 50%;
-							    font-size: 1.4rem;
+							    font-size: 1.3rem;
 							    cursor: pointer;
 							    z-index: 3;
 							    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 							    transition: background 0.3s ease, transform 0.2s ease;
+							    display: flex;
+							    align-items: center;
+							    justify-content: center;
 							  }
 							
 							  .carousel-btn:hover {
@@ -260,21 +263,39 @@
 							  }
 							
 							  .carousel-btn.prev {
-							    left: -2.5rem;
+							    left: -4rem;
 							  }
 							
 							  .carousel-btn.next {
-							    right: -2.5rem;
+							    right: -4rem;
 							  }
 							
 							  @media screen and (max-width: 768px) {
-							    .carousel-btn.prev,
-							    .carousel-btn.next {
-							      left: 0.5rem;
-							      right: 0.5rem;
-							    }
 							    .carousel-wrapper {
-							      padding: 0 2.5rem;
+							      padding: 0 1rem;
+							    }
+							
+							    .carousel-track {
+							      scroll-snap-type: none;
+							    }
+							
+							    .certificate-slide img {
+							      height: auto;
+							      width: 100%;
+							    }
+							
+							    .carousel-btn {
+							      width: 2.5rem;
+							      height: 2.5rem;
+							      font-size: 1.2rem;
+							    }
+							
+							    .carousel-btn.prev {
+							      left: 0.2rem;
+							    }
+							
+							    .carousel-btn.next {
+							      right: 0.2rem;
 							    }
 							  }
 							</style>
@@ -289,7 +310,6 @@
 							    carousel.style.transform = `translateX(-${index * 100}%)`;
 							  }
 							
-							  // Autoplay every 8 seconds
 							  setInterval(() => {
 							    scrollCarousel(1);
 							  }, 8000);
