@@ -162,40 +162,46 @@
 							  }
 							</style>
 
-							<!-- Second Section (Certificates Carousel Improved) -->
+							<!-- Second Section (Certificates Carousel Fully Refined) -->
 							<section id="second" class="main special">
 							  <header class="major">
 							    <h2>Certificates</h2>
 							  </header>
 							
 							  <div class="carousel-wrapper">
-							    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
-							    
 							    <div class="carousel-track" id="carousel">
 							      <div class="certificate-slide">
 							        <a href="https://www.coursera.org/account/accomplishments/specialization/S3TH1MCQ6BPD" target="_blank">
 							          <img src="images/certificates/certificate1.jpeg" alt="Microsoft Certificate" />
 							        </a>
-							        <p class="cert-title">Microsoft Power Platform Fundamentals</p>
+							        <p class="cert-title"><strong>Microsoft Power Platform Fundamentals</strong></p>
 							      </div>
 							      <div class="certificate-slide">
 							        <a href="#">
 							          <img src="images/certificates/certificate2.jpeg" alt="PMI Certificate" />
 							        </a>
-							        <p class="cert-title">Gerencia de Proyectos con Metodología PMI</p>
+							        <p class="cert-title"><strong>Gerencia de Proyectos con Metodología PMI</strong></p>
 							      </div>
 							    </div>
 							
+							    <!-- Navigation buttons outside -->
+							    <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
 							    <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
 							  </div>
 							</section>
 							
 							<style>
+							  /* Avoid border on images and links */
+							  .certificate-slide a {
+							    border-bottom: none !important;
+							  }
+							
 							  .carousel-wrapper {
 							    position: relative;
 							    max-width: 800px;
 							    margin: 0 auto;
 							    overflow: hidden;
+							    padding: 0 4rem; /* give space for arrows */
 							  }
 							
 							  .carousel-track {
@@ -223,7 +229,7 @@
 							
 							  .certificate-slide img:hover {
 							    transform: scale(1.03);
-							    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+							    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 							  }
 							
 							  .cert-title {
@@ -236,34 +242,39 @@
 							    position: absolute;
 							    top: 50%;
 							    transform: translateY(-50%);
-							    background: rgba(255, 255, 255, 0.8);
+							    background: rgba(255, 255, 255, 0.85);
 							    border: none;
-							    width: 2.5rem;
-							    height: 2.5rem;
+							    width: 2.8rem;
+							    height: 2.8rem;
 							    border-radius: 50%;
-							    font-size: 1.3rem;
+							    font-size: 1.4rem;
 							    cursor: pointer;
-							    z-index: 2;
-							    transition: background 0.3s ease;
+							    z-index: 3;
+							    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+							    transition: background 0.3s ease, transform 0.2s ease;
 							  }
 							
 							  .carousel-btn:hover {
-							    background: rgba(220, 220, 220, 0.9);
+							    background: rgba(220, 220, 220, 0.95);
+							    transform: translateY(-50%) scale(1.1);
 							  }
 							
 							  .carousel-btn.prev {
-							    left: -3rem;
+							    left: -2.5rem;
 							  }
 							
 							  .carousel-btn.next {
-							    right: -3rem;
+							    right: -2.5rem;
 							  }
 							
 							  @media screen and (max-width: 768px) {
 							    .carousel-btn.prev,
 							    .carousel-btn.next {
-							      left: 5px;
-							      right: 5px;
+							      left: 0.5rem;
+							      right: 0.5rem;
+							    }
+							    .carousel-wrapper {
+							      padding: 0 2.5rem;
 							    }
 							  }
 							</style>
